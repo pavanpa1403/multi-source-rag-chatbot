@@ -1,6 +1,7 @@
 # Multi-Source RAG Chatbot
 
 ![Multi-Source RAG Chatbot](rag-chatbot-ui.png)
+![RAG Architecture](rag-architecture.png)
 
 A Retrieval-Augmented Generation (RAG) chatbot built with Python that can answer questions using information from multiple sources, including PDF documents and websites.
 
