@@ -7,7 +7,6 @@ langchain-ollama
 langchain-chroma
 chromadb
 
-chromadb
 faiss-cpu
 
 sentence-transformers
