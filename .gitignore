@@ -1,0 +1,17 @@
+﻿.env
+__pycache__/
+*.pyc
+
+vector_db/
+uploads/
+documents/
+evaluation_results/
+
+.venv/
+venv/
+*.log
+
+.ipynb_checkpoints/
+.vscode/
+
+evaluation/
