@@ -6,8 +6,9 @@ langchain-huggingface
 langchain-ollama
 langchain-chroma
 chromadb
-
+rank-bm25
 faiss-cpu
+
 
 sentence-transformers
 transformers
@@ -15,6 +16,7 @@ torch
 
 streamlit
 pypdf
+pdf2image
 
 python-dotenv
 tqdm
