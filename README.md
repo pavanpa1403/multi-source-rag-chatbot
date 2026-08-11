@@ -33,6 +33,23 @@ The system combines document processing, OCR, embeddings, ChromaDB, BM25 keyword
 ![RAG Architecture](rag-architecture.png)
 ![RAG Chatbot UI](rag-chatbot-ui.png)
 
+## Evaluation
+
+The RAG pipeline was evaluated using 10 domain-specific questions covering
+retrieval accuracy and answer quality.
+
+| Metric | Result |
+|---|---:|
+| Total Questions | 10 |
+| Retrieval Passed | 10/10 |
+| Retrieval Failed | 0 |
+| Retrieval Accuracy | **100%** |
+| Answer Quality Passed | 9/10 |
+| Answer Quality Failed | 1 |
+| Answer Quality Accuracy | **90%** |
+
+The evaluation verifies the performance of the hybrid retrieval pipeline
+combining vector search, BM25 keyword retrieval, and Reciprocal Rank Fusion (RRF).
 ## Installation
 
 ### 1. Clone the repository
@@ -40,3 +57,4 @@ The system combines document processing, OCR, embeddings, ChromaDB, BM25 keyword
 ```bash
 git clone https://github.com/pavanpa1403/multi-source-rag-chatbot.git
 cd multi-source-rag-chatbot
+
