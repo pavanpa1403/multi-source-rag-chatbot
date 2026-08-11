@@ -1,9 +1,4 @@
 # Multi-Source RAG Chatbot
-![Python](https://img.shields.io/badge/Python-3.11-blue)
-![LangChain](https://img.shields.io/badge/LangChain-RAG-green)
-![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
-![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-black)
-![License](https://img.shields.io/badge/License-Demo-lightgrey)
 
 A Retrieval-Augmented Generation (RAG) chatbot built with Python that can answer questions using information from multiple sources, including PDF documents and websites.
 
@@ -31,30 +26,48 @@ The system combines document processing, OCR, embeddings, ChromaDB, BM25 keyword
 ## Architecture
 
 ![RAG Architecture](rag-architecture.png)
-![RAG Chatbot UI](rag-chatbot-ui.png)
 
-## Evaluation
+### RAG Pipeline
 
-The RAG pipeline was evaluated using 10 domain-specific questions covering
-retrieval accuracy and answer quality.
-
-| Metric | Result |
-|---|---:|
-| Total Questions | 10 |
-| Retrieval Passed | 10/10 |
-| Retrieval Failed | 0 |
-| Retrieval Accuracy | **100%** |
-| Answer Quality Passed | 9/10 |
-| Answer Quality Failed | 1 |
-| Answer Quality Accuracy | **90%** |
-
-The evaluation verifies the performance of the hybrid retrieval pipeline
-combining vector search, BM25 keyword retrieval, and Reciprocal Rank Fusion (RRF).
-## Installation
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/pavanpa1403/multi-source-rag-chatbot.git
-cd multi-source-rag-chatbot
-
+```text
+PDF / Website
+      |
+      v
+Document Loaders
++ OCR if required
+      |
+      v
+Document Cleaning
+      |
+      v
+Chunking
+      |
+      v
+Embeddings
+      |
+      v
+ChromaDB
+      |
+      +----------------------+
+      |                      |
+      v                      v
+Vector Search          BM25 Search
+      |                      |
+      +----------+-----------+
+                 |
+                 v
+        Hybrid Retrieval
+              + RRF
+                 |
+                 v
+       Question Rewriting
+        using Chat History
+                 |
+                 v
+       Context Optimization
+                 |
+                 v
+                LLM
+                 |
+                 v
+          Answer + Sources
