@@ -1,4 +1,9 @@
 # Multi-Source RAG Chatbot
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![LangChain](https://img.shields.io/badge/LangChain-RAG-green)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
+![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-black)
+![License](https://img.shields.io/badge/License-Demo-lightgrey)
 
 A Retrieval-Augmented Generation (RAG) chatbot built with Python that can answer questions using information from multiple sources, including PDF documents and websites.
 
