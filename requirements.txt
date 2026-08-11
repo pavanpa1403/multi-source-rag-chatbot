@@ -9,14 +9,17 @@ chromadb
 rank-bm25
 faiss-cpu
 
-
 sentence-transformers
 transformers
 torch
+torchvision
 
 streamlit
 pypdf
 pdf2image
+pytesseract
+beautifulsoup4
+playwright
 
 python-dotenv
 tqdm
